@@ -1,0 +1,62 @@
+.hero {
+  background: linear-gradient( 90deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%), url("../images/herobg.jpg") no-repeat center / cover;
+  position: relative;
+  padding-top: 248px;
+  padding-bottom: 230px;
+
+  @media (min-resolution: 192dpi) {
+    background: linear-gradient( 90deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%), url("../images/herobg@2x.jpg") no-repeat center / cover;;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__title-first-text,
+  &__title-second-text,
+  &__title-second-text-br {
+    display: block;
+    color: $nav-hero-icon-hover-color;
+  }
+
+  &__title-first-text {
+    font: $section-title-first-row-font;
+    font-size: 72px;
+    text-transform: capitalize;
+  }
+
+  &__title-second-text,
+  &__title-second-text-br {
+    font: $section-title-second-row-font;
+    font-size: 150px;
+    text-transform: uppercase;
+  }
+
+  &__btn-link {
+    display: block;
+    margin: 114px auto 0;
+    text-align: center;
+    width: max-content;
+    padding: 12px 32px;
+    border: 3px solid $nav-hero-icon-hover-color;
+    font: $section-title-second-row-font;
+    font-size: 14px;
+    color: $nav-hero-icon-hover-color;
+    text-transform: uppercase;
+    transition-property:
+      background-color,
+      border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+
+    &:hover {
+      background-color: $hover-nav-link-social-icons-bg-color;
+      border-color: $hover-nav-link-social-icons-bg-color;
+      transition-property:
+        background-color,
+        border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
+    }
+  }
+}

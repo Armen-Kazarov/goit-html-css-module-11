@@ -1,0 +1,155 @@
+.meet-our-team {
+  padding-top: 100px;
+  padding-bottom: 82px;
+
+  &__description-text {
+    font: 400 15px/24px "Roboto", sans-serif;
+    color: $sections-text-color;
+    text-align: center;
+    max-width: 1000px;
+    margin: 44px auto 90px;
+  }
+}
+
+.team-cards {
+  justify-content: space-between;
+
+  &__photo-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: $nav-btn-hoverphoto-color;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover {
+      .team-cards__specialist-photo {
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        transform: translate(-10px, -10px);
+      }
+
+      .overlay {
+        transition-property:
+          visibility,
+          opacity,
+          transform;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-10px, -10px);
+      }
+    }
+  }
+
+  &__specialist-name {
+    text-align: center;
+    margin: 30px 0 14px;
+  }
+
+  &__specialist-photo {
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+  }
+
+  &__specialist-position {
+    font: 300 italic 15px/24px "Roboto", sans-serif;
+    color: $sections-text-color;
+    text-align: center;
+  }
+}
+
+.overlay {
+  @extend %align-center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient( 90deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition-property:
+    visibility,
+    opacity,
+    transform;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.social-network {
+  &__social-btn {
+    background-color: $hover-nav-link-social-icons-bg-color;
+    transition-property:
+      background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    margin-right: 1px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transition-property:
+        background-color;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
+      background-color: $decorationline-hover-social-icons-bg-color;
+
+      .social-network__icons {
+        fill: $nav-hero-icon-hover-color;
+        transition-property: fill;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    @extend %align-center;
+    width: 56px;
+    height: 56px;
+  }
+
+  &__icon-facebook,
+  &__icon-twitter,
+  &__icon-pinterest,
+  &__icon-instagram {
+    fill: $decorationline-hover-social-icons-bg-color;
+    transition-property: fill;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+  }
+
+  &__icon-facebook {
+    width: 13px;
+    height: 26px;
+  }
+
+  &__icon-twitter {
+    width: 26px;
+    height: 22px;
+  }
+
+  &__icon-pinterest {
+    width: 21px;
+    height: 26px;
+  }
+
+  &__icon-instagram {
+    width: 26px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,25 @@
+.section__title {
+  margin: 0 auto;
+  text-align: center;
+  color: $titles-subtaitles-footercopyright-color;
+}
+
+.section__title-first-row {
+  display: block;
+  margin-bottom: 20px;
+  font: $section-title-first-row-font;
+}
+
+.section__title-second-row {
+  text-transform: uppercase;
+  font: $section-title-second-row-font;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $decorationline-hover-social-icons-bg-color;
+    margin: 40px auto 0;
+  }
+}

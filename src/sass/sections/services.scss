@@ -1,0 +1,51 @@
+.amazing-services {
+  padding-top: 54px;
+}
+
+.amazing-services-list {
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 382px;
+    padding-left: 82px;
+
+    &:nth-child(-n+3) {
+      margin-top: 64px;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+  }
+
+  &__item-text {
+    font: 400 15px/24px "Roboto", sans-serif;
+    color: $sections-text-color;
+  }
+
+  &--bg-alarm {
+    background: url("../images/icons/alarm.svg") 20px 0 no-repeat;
+  }
+
+  &--bg-line-graph {
+    background: url("../images/icons/line-graph.svg") 20px 0 no-repeat;
+  }
+
+  &--bg-computer {
+    background: url("../images/icons/computer-ok.svg") 20px 0 no-repeat;
+  }
+
+  &--bg-book {
+    background: url("../images/icons/book-2.svg") 20px 0 no-repeat;
+  }
+
+  &--bg-home {
+    background: url("../images/icons/home.svg") 20px 0 no-repeat;
+  }
+
+  &--bg-image {
+    background: url("../images/icons/image.svg") 20px 0 no-repeat;
+  }
+}
