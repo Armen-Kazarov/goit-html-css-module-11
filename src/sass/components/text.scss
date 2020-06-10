@@ -1,3 +1,13 @@
+.first-letter-uppercase:first-letter {
+  text-transform: uppercase;
+}
+
+.section__subtitle {
+  font: $nav-main-subtitles-footer-font;
+  text-transform: uppercase;
+  color: $titles-subtaitles-footercopyright-color;
+}
+
 .section__title {
   margin: 0 auto;
   text-align: center;
